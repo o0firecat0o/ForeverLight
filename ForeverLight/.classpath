@@ -10,6 +10,7 @@
 	<classpathentry kind="lib" path="lib/lwjgl-nanovg-natives-windows.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl-nanovg-sources.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl-nanovg.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-natives-windows.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl-openal-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl-openal-natives-windows.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl-openal-sources.jar"/>
