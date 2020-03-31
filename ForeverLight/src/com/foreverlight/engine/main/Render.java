@@ -6,6 +6,7 @@ import static org.lwjgl.system.MemoryUtil.NULL;
 
 import org.lwjgl.glfw.GLFWVidMode;
 
+//Each window should be contained in different render loop
 public class Render implements Runnable {
 
 	// the opengl window id
@@ -33,7 +34,7 @@ public class Render implements Runnable {
 		glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
 		// create the window, passing the height/ width/ name
-		window = glfwCreateWindow(height, width, "Tower Defense Evovled", NULL, NULL);
+		window = glfwCreateWindow(height, width, "ForeverLight", NULL, NULL);
 
 		// check if window is created
 		if (window == 0) {
