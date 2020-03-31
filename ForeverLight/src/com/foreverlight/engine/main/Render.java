@@ -15,6 +15,12 @@ public class Render implements Runnable {
 	private int height = 1280;
 	private int width = 640;
 
+	private long fps = 0;
+
+	public long getFps() {
+		return fps;
+	}
+
 	// check if someone close the window, if window closed => running = false
 	private boolean running = true;
 
@@ -61,11 +67,23 @@ public class Render implements Runnable {
 		// create the opengl environment
 		init();
 
+		// used for fps calculation
+		long originalTime = System.currentTimeMillis();
+		long accumulator = 0;
+
 		// run while the window remains open
 		while (running) {
 			// Process all pending events, including displaying window, handling keyboard
 			// and mouse inputs
 			glfwPollEvents();
+
+			// calculate the fps
+			accumulator++;
+			if (System.currentTimeMillis() - originalTime >= 1000) {
+				originalTime = System.currentTimeMillis();
+				fps = accumulator;
+				accumulator = 0;
+			}
 
 			// if someone closed the window
 			if (glfwWindowShouldClose(window) == true) {
