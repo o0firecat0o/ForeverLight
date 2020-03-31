@@ -74,6 +74,13 @@ public class Render implements Runnable {
 		}
 
 		// below are the codes after closing the window
+		System.out.println("Window/ Opengl is Closing");
+		// destroy the current window
+		glfwDestroyWindow(window);
+		// end the glfw to give out memory
+		glfwTerminate();
+
 		System.out.println("Application Closed");
+		System.exit(0);
 	}
 }
